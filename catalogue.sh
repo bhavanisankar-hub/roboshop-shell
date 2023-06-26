@@ -21,7 +21,7 @@ cd /app &>>/tmp/roboshop.log
 npm install   &>>/tmp/roboshop.log
 
 echo -e "\e[31minstalling serivce\e[0m"
-cp /home/centos/roboshop-shell/catalogue.servie /etc/systemd/system/catalogue.service  &>>/tmp/roboshop.log
+cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service  &>>/tmp/roboshop.log
 
 echo -e "\e[31mrestrating\e[0m"
 systemctl daemon-reload   &>>/tmp/roboshop.log
