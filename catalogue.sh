@@ -19,7 +19,7 @@ unzip /tmp/catalogue.zip   &>>/tmp/roboshop.log
 echo -e "\e[31minstalling o\e[0m"
 cd /app &>>/tmp/roboshop.log
 npm install   &>>/tmp/roboshop.log
-
+devOps321
 echo -e "\e[31minstalling serivce\e[0m"
 cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service  &>>/tmp/roboshop.log
 
