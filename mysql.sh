@@ -13,6 +13,3 @@ systemctl start mysqld  &>>/tmp/roboshop.log
 
 echo -e "\e[31msetting password\e[0m"
 mysql_secure_installation --set-root-pass RoboShop@1 &>>/tmp/roboshop.log
-
-echo -e "\e[31mcopying mysql repo\e[0m"
-mysql -uroot -pRoboShop@1  &>>/tmp/roboshop.log
