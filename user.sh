@@ -12,9 +12,9 @@ rm -rf /app  &>>/tmp/roboshop.log
 mkdir /app   &>>/tmp/roboshop.log
 
 echo -e "\e[31mextracting content\e[0m"
-curl -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip  &>>/tmp/roboshop.log
-cd /app  &>>/tmp/roboshop.log
-unzip /tmp/user.zip   &>>/tmp/roboshop.log
+curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip
+cd /app
+unzip /tmp/user.zip
 
 echo -e "\e[31minstalling o\e[0m"
 cd /app &>>/tmp/roboshop.log
