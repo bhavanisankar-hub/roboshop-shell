@@ -16,7 +16,7 @@ curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue
 cd /app  &>>/tmp/roboshop.log
 unzip /tmp/catalogue.zip   &>>/tmp/roboshop.log
 
-echo -e "\e[31installing o\e[0m"
+echo -e "\e[31minstalling o\e[0m"
 cd /app &>>/tmp/roboshop.log
 npm install   &>>/tmp/roboshop.log
 
@@ -28,11 +28,11 @@ systemctl daemon-reload   &>>/tmp/roboshop.log
 systemctl enable catalogue   &>>/tmp/roboshop.log
 systemctl start catalogue   &>>/tmp/roboshop.log
 
-echo -e "\e[31copymmanodb repo\e[0m"
+echo -e "\e[31mcopymmanodb repo\e[0m"
 cp mongodb.repo /etc/yum.repos.d/mongodb.repo  &>>/tmp/roboshop.log
 
 echo -e "\e[31minstalling mango db\e[0m"
 yum install mongodb-org-shell -y   &>>/tmp/roboshop.log
 
-echo -e "\e[31mload mangodb\e[0m"
+echo -e "\e[31mmangodb scema\e[0m"
 mongo --host mongodb-dev.devops89.site </app/schema/catalogue.js  &>>/tmp/roboshop.log
