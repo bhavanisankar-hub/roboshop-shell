@@ -11,7 +11,7 @@ echo -e "\e[31mextracting nginx server\e[0m"
 cd /usr/share/nginx/html  &>>/tmp/roboshop.log
 unzip /tmp/frontend.zip  &>>/tmp/roboshop.log
 
-echo -e "\e[31update configuration file\e[0m"
+echo -e "\e[31mupdate configuration file\e[0m"
 cp /home/centos/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 echo -e "\e[31mrestarting nginx server\e[0m"
