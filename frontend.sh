@@ -11,7 +11,8 @@ echo -e "\e[31mextracting nginx server\e[0m"
 cd /usr/share/nginx/html &>>/tmp/roboshop.log
 unzip /tmp/frontend.zip  &>>/tmp/roboshop.log
 
-##need to configure fine
+echo -e "\e[31update configuration file\e[0m"
+cp roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 echo -e "\e[31mrestarting nginx server\e[0m"
 systemctl enable nginx   &>>/tmp/roboshop.log
