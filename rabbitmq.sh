@@ -1,11 +1,16 @@
-curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
+echo -e "\e[31mcreating repos\e[0m"
+curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash  &>>/tmp/roboshop.log
 
-curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash
+echo -e "\e[31mcreating repos rabbitmq\e[0m"
+curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash  &>>/tmp/roboshop.log
 
-yum install rabbitmq-server -y 
+echo -e "\e[31mInstalling rabbitmq\e[0m"
+yum install rabbitmq-server -y  &>>/tmp/roboshop.log
 
-systemctl enable rabbitmq-server 
-systemctl start rabbitmq-server 
+echo -e "\e[31mrestarting\e[0m"
+systemctl enable rabbitmq-server &>>/tmp/roboshop.log
+systemctl start rabbitmq-server  &>>/tmp/roboshop.log
 
-rabbitmqctl add_user roboshop roboshop123
-rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"
+echo -e "\e[31massigning pwd\e[0m"
+rabbitmqctl add_user roboshop roboshop123 &>>/tmp/roboshop.log
+rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"  &>>/tmp/roboshop.log
