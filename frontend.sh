@@ -8,7 +8,7 @@ echo -e "\e[31mdownloading content\e[0m"
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>/tmp/roboshop.log
 
 echo -e "\e[31mextracting nginx server\e[0m"
-cd /usr/share/nginx/html &>>/tmp/roboshop.log
+cd /usr/share/nginx/html  &>>/tmp/roboshop.log
 unzip /tmp/frontend.zip  &>>/tmp/roboshop.log
 
 echo -e "\e[31update configuration file\e[0m"
