@@ -21,7 +21,7 @@ cd /app &>>/tmp/roboshop.log
 npm install   &>>/tmp/roboshop.log
 
 echo -e "\e[31minstalling serivce\e[0m"
-cp catalogue.servie /etc/systemd/system/catalogue.service  &>>/tmp/roboshop.log
+cp /home/centos/roboshop-shell/catalogue.servie /etc/systemd/system/catalogue.service  &>>/tmp/roboshop.log
 
 echo -e "\e[31mrestrating\e[0m"
 systemctl daemon-reload   &>>/tmp/roboshop.log
@@ -29,7 +29,7 @@ systemctl enable catalogue   &>>/tmp/roboshop.log
 systemctl start catalogue   &>>/tmp/roboshop.log
 
 echo -e "\e[31mcopymmanodb repo\e[0m"
-cp mongodb.repo /etc/yum.repos.d/mongodb.repo  &>>/tmp/roboshop.log
+cp /home/centos/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo  &>>/tmp/roboshop.log
 
 echo -e "\e[31minstalling mango db\e[0m"
 yum install mongodb-org-shell -y   &>>/tmp/roboshop.log
