@@ -5,7 +5,7 @@ echo -e "\e[31muser add\e[0m"
 useradd roboshop &>>/tmp/roboshop.log
 
 echo -e "\e[31mremoving and creating\e[0m"
-rfdir /app &>>/tmp/roboshop.log
+rm -rf /app &>>/tmp/roboshop.log
 mkdir /app  &>>/tmp/roboshop.log
 
 echo -e "\e[31mextracting config file\e[0m"
